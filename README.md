@@ -2,9 +2,9 @@
 
 > A beautiful, feature-rich study habit tracker with screen-time style analytics and daily journaling.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://your-username.github.io/study-tracker-2026/)
+[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://nikh27.github.io/habit-tracker-2026/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Made with Love](https://img.shields.io/badge/made%20with-❤️-red.svg)](https://github.com/your-username/study-tracker-2026)
+[![Made with Love](https://img.shields.io/badge/made%20with-❤️-red.svg)](https://github.com/nikh27/habit-tracker-2026)
 
 ## ✨ Features
 
@@ -49,16 +49,16 @@
 ## 🚀 Quick Start
 
 ### Option 1: Use Online (Recommended)
-1. Visit the [Live Demo](https://your-username.github.io/study-tracker-2026/)
+1. Visit the [Live Demo](https://nikh27.github.io/habit-tracker-2026/)
 2. Start tracking immediately!
 
 ### Option 2: Run Locally
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/study-tracker-2026.git
+git clone https://github.com/nikh27/habit-tracker-2026.git
 
 # Navigate to folder
-cd study-tracker-2026
+cd habit-tracker-2026
 
 # Open in browser
 # Just double-click index.html or:
@@ -221,8 +221,8 @@ MIT License - feel free to use for personal or commercial projects!
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/your-username/study-tracker-2026/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-username/study-tracker-2026/discussions)
+- **Issues**: [GitHub Issues](https://github.com/nikh27/habit-tracker-2026/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/nikh27/habit-tracker-2026/discussions)
 
 ## 🎯 Roadmap
 
