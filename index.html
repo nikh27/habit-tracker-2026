@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Production-quality Habit & Productivity Tracker - Track habits, build streaks, and achieve your goals in 2026">
+    <title>Habit Tracker 2026 - Build Better Habits</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-logo">🎯</span>
+                <h1 class="nav-title">Habit Tracker</h1>
+            </div>
+            <ul class="nav-menu" role="menubar">
+                <li role="none">
+                    <button class="nav-link active" data-view="dashboard" role="menuitem" aria-label="Dashboard">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-text">Dashboard</span>
+                    </button>
+                </li>
+                <li role="none">
+                    <button class="nav-link" data-view="calendar" role="menuitem" aria-label="Calendar">
+                        <span class="nav-icon">📅</span>
+                        <span class="nav-text">Calendar</span>
+                    </button>
+                </li>
+                <li role="none">
+                    <button class="nav-link" data-view="habits" role="menuitem" aria-label="Habits">
+                        <span class="nav-icon">✅</span>
+                        <span class="nav-text">Habits</span>
+                    </button>
+                </li>
+                <li role="none">
+                    <button class="nav-link" data-view="analytics" role="menuitem" aria-label="Analytics">
+                        <span class="nav-icon">📈</span>
+                        <span class="nav-text">Analytics</span>
+                    </button>
+                </li>
+                <li role="none">
+                    <button class="nav-link" data-view="settings" role="menuitem" aria-label="Settings">
+                        <span class="nav-icon">⚙️</span>
+                        <span class="nav-text">Settings</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard View -->
+        <section id="dashboard-view" class="view active" role="region" aria-label="Dashboard">
+            <div class="view-header">
+                <h2 class="view-title">Dashboard</h2>
+                <p class="view-subtitle">Your habit overview for today</p>
+            </div>
+            <div id="dashboard-content" class="dashboard-grid">
+                <!-- Dashboard content will be dynamically generated -->
+            </div>
+        </section>
+
+        <!-- Calendar View -->
+        <section id="calendar-view" class="view" role="region" aria-label="Calendar">
+            <div class="view-header">
+                <h2 class="view-title">Calendar 2026</h2>
+                <div class="view-actions">
+                    <div class="view-mode-selector">
+                        <button class="view-mode-btn active" data-mode="yearly">📅 Yearly</button>
+                        <button class="view-mode-btn" data-mode="monthly">📆 Monthly</button>
+                        <button class="view-mode-btn" data-mode="weekly">📊 Weekly</button>
+                        <button class="view-mode-btn" data-mode="daily">📋 Daily</button>
+                    </div>
+                    <button id="add-habit-btn" class="btn btn-primary" aria-label="Add new habit">
+                        <span>➕</span> Add Habit
+                    </button>
+                </div>
+            </div>
+            <div id="calendar-content">
+                <!-- Calendar will be dynamically generated -->
+            </div>
+        </section>
+
+        <!-- Habits View -->
+        <section id="habits-view" class="view" role="region" aria-label="Habits">
+            <div class="view-header">
+                <h2 class="view-title">My Habits</h2>
+                <div class="view-actions">
+                    <button id="add-habit-btn-2" class="btn btn-primary" aria-label="Add new habit">
+                        <span>➕</span> Add Habit
+                    </button>
+                </div>
+            </div>
+            <div class="habits-controls">
+                <div class="filter-group">
+                    <label for="filter-priority">Filter by Priority:</label>
+                    <select id="filter-priority" class="select">
+                        <option value="all">All Priorities</option>
+                        <option value="high">🔥 High</option>
+                        <option value="medium">⚡ Medium</option>
+                        <option value="low">🌱 Low</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort-habits">Sort by:</label>
+                    <select id="sort-habits" class="select">
+                        <option value="priority">Priority</option>
+                        <option value="progress">Progress</option>
+                        <option value="streak">Streak</option>
+                        <option value="name">Name</option>
+                    </select>
+                </div>
+            </div>
+            <div id="habits-list" class="habits-list">
+                <!-- Habits will be dynamically generated -->
+            </div>
+        </section>
+
+        <!-- Analytics View -->
+        <section id="analytics-view" class="view" role="region" aria-label="Analytics">
+            <div class="view-header">
+                <h2 class="view-title">Analytics</h2>
+                <p class="view-subtitle">Your progress insights</p>
+            </div>
+            <div id="analytics-content" class="analytics-grid">
+                <!-- Analytics will be dynamically generated -->
+            </div>
+        </section>
+
+        <!-- Settings View -->
+        <section id="settings-view" class="view" role="region" aria-label="Settings">
+            <div class="view-header">
+                <h2 class="view-title">Settings</h2>
+                <p class="view-subtitle">Customize your experience</p>
+            </div>
+            <div class="settings-content">
+                <div class="setting-group">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3 class="setting-title">Theme</h3>
+                            <p class="setting-description">Choose your preferred color scheme</p>
+                        </div>
+                        <div class="setting-control">
+                            <button id="theme-toggle" class="toggle-btn" aria-label="Toggle theme">
+                                <span class="toggle-track">
+                                    <span class="toggle-thumb"></span>
+                                </span>
+                                <span id="theme-label">Dark</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3 class="setting-title">Week Starts On</h3>
+                            <p class="setting-description">Choose the first day of the week</p>
+                        </div>
+                        <div class="setting-control">
+                            <select id="week-start" class="select">
+                                <option value="monday">Monday</option>
+                                <option value="sunday">Sunday</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3 class="setting-title">View Mode</h3>
+                            <p class="setting-description">Adjust the density of information</p>
+                        </div>
+                        <div class="setting-control">
+                            <select id="view-mode" class="select">
+                                <option value="comfortable">Comfortable</option>
+                                <option value="compact">Compact</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting-group">
+                    <h3 class="setting-group-title">Data Management</h3>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3 class="setting-title">Export Data</h3>
+                            <p class="setting-description">Download your habits data as JSON</p>
+                        </div>
+                        <div class="setting-control">
+                            <button id="export-data-btn" class="btn btn-secondary">Export</button>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3 class="setting-title">Reset All Data</h3>
+                            <p class="setting-description">Delete all habits and start fresh</p>
+                        </div>
+                        <div class="setting-control">
+                            <button id="reset-data-btn" class="btn btn-danger">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Habit Modal -->
+    <div id="habit-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 id="modal-title" class="modal-title">Add New Habit</h2>
+                <button class="modal-close" aria-label="Close modal">✕</button>
+            </div>
+            <form id="habit-form" class="modal-body">
+                <div class="form-group">
+                    <label for="habit-name" class="form-label">Habit Name <span class="required">*</span></label>
+                    <input type="text" id="habit-name" class="form-input" placeholder="e.g., Morning Exercise" required>
+                    <span class="form-error" id="name-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="habit-description" class="form-label">Description / Why</label>
+                    <textarea id="habit-description" class="form-textarea" rows="3" placeholder="Why is this habit important to you?"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="habit-category" class="form-label">Subject/Category</label>
+                        <select id="habit-category" class="form-select">
+                            <option value="dsa">Data Structures & Algorithms</option>
+                            <option value="programming">Programming/Coding</option>
+                            <option value="theory">Theory/Concepts</option>
+                            <option value="mathematics">Mathematics</option>
+                            <option value="reading">Reading/Research</option>
+                            <option value="practice">Practice Problems</option>
+                            <option value="revision">Revision/Review</option>
+                            <option value="projects">Projects</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="habit-priority" class="form-label">Priority</label>
+                        <select id="habit-priority" class="form-select">
+                            <option value="high">🔥 High</option>
+                            <option value="medium">⚡ Medium</option>
+                            <option value="low">🌱 Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="habit-icon" class="form-label">Icon</label>
+                        <button type="button" id="habit-icon" class="icon-picker-btn">
+                            <span id="selected-icon">�</span>
+                        </button>
+                        <div id="emoji-picker" class="emoji-picker hidden">
+                            <div class="emoji-grid">
+                                <button type="button" class="emoji-option" data-emoji="💻">💻</button>
+                                <button type="button" class="emoji-option" data-emoji="�">�</button>
+                                <button type="button" class="emoji-option" data-emoji="✍️">✍️</button>
+                                <button type="button" class="emoji-option" data-emoji="🧮">🧮</button>
+                                <button type="button" class="emoji-option" data-emoji="�">�</button>
+                                <button type="button" class="emoji-option" data-emoji="🎯">🎯</button>
+                                <button type="button" class="emoji-option" data-emoji="�">�</button>
+                                <button type="button" class="emoji-option" data-emoji="📝">📝</button>
+                                <button type="button" class="emoji-option" data-emoji="🔬">🔬</button>
+                                <button type="button" class="emoji-option" data-emoji="📖">📖</button>
+                                <button type="button" class="emoji-option" data-emoji="�">�</button>
+                                <button type="button" class="emoji-option" data-emoji="⚡">⚡</button>
+                                <button type="button" class="emoji-option" data-emoji="�">�</button>
+                                <button type="button" class="emoji-option" data-emoji="💡">💡</button>
+                                <button type="button" class="emoji-option" data-emoji="�">�</button>
+                                <button type="button" class="emoji-option" data-emoji="⭐">⭐</button>
+                                <button type="button" class="emoji-option" data-emoji="�">�</button>
+                                <button type="button" class="emoji-option" data-emoji="✅">✅</button>
+                                <button type="button" class="emoji-option" data-emoji="🎨">🎨</button>
+                                <button type="button" class="emoji-option" data-emoji="�">�</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="habit-color" class="form-label">Color</label>
+                        <input type="color" id="habit-color" class="form-color" value="#3b82f6">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="habit-start-date" class="form-label">Start Date</label>
+                        <input type="date" id="habit-start-date" class="form-input" value="2026-01-01">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="habit-end-date" class="form-label">End Date (Optional)</label>
+                        <input type="date" id="habit-end-date" class="form-input">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Goal</label>
+                    <div class="goal-options">
+                        <label class="radio-label">
+                            <input type="radio" name="goal-type" value="daily" checked>
+                            <span>Daily habit</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="goal-type" value="weekly">
+                            <span>X days per week</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="goal-type" value="total">
+                            <span>X total days</span>
+                        </label>
+                    </div>
+                    <div id="goal-value-container" class="goal-value-container hidden">
+                        <input type="number" id="goal-value" class="form-input" min="1" max="7" placeholder="Enter number">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="habit-reminder">
+                        <span>Enable reminder (UI only)</span>
+                    </label>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary modal-cancel">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Habit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Day Details Modal -->
+    <div id="day-details-modal" class="modal" role="dialog" aria-labelledby="day-details-title" aria-modal="true">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 id="day-details-title" class="modal-title">Day Details</h2>
+                <button class="modal-close day-details-close" aria-label="Close modal">✕</button>
+            </div>
+            <div class="modal-body" id="day-details-content">
+                <!-- Day details will be dynamically generated -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirm-modal" class="modal" role="dialog" aria-labelledby="confirm-title" aria-modal="true">
+        <div class="modal-overlay"></div>
+        <div class="modal-container modal-small">
+            <div class="modal-header">
+                <h2 id="confirm-title" class="modal-title">Confirm Action</h2>
+            </div>
+            <div class="modal-body">
+                <p id="confirm-message" class="confirm-message"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary confirm-cancel">Cancel</button>
+                <button class="btn btn-danger confirm-ok">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

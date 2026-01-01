@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.log
+*.tmp
+.cache/
+
+# Backup file (not needed in repo)
+analytics_new.js
+
+# Brain/artifacts directory (development notes)
+.gemini/
